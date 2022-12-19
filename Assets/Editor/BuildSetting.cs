@@ -9,7 +9,7 @@ public class BuildSetting : MonoBehaviour
     public static void MyBuild()
     {
         string cPath = System.IO.Directory.GetCurrentDirectory();
-        string path = cPath + "Build";
+        string path = cPath + "/Build/";
 
         // 해당 path의 정보
         System.IO.FileInfo pathInfo = new System.IO.FileInfo(path);
