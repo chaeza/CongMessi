@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using UnityEditor;
 
-public class BuildSetting : MonoBehaviour
+public static class BuildSetting : MonoBehaviour
 {
     [UnityEditor.MenuItem("MyMenu/MyBuild", false, 1)]
     public static void MyBuild()
