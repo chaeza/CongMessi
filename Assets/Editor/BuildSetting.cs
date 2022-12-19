@@ -10,7 +10,7 @@ public static class BuildSetting
     public static void MyBuild()
     {
         string cPath = "C:/Users/User/Desktop";
-        string path = cPath + "/Build";
+        string path = cPath + "/Build/";
 
         // 해당 path의 정보
         FileInfo pathInfo = new FileInfo(path);
@@ -25,7 +25,7 @@ public static class BuildSetting
             Directory.CreateDirectory(path);
         }
         // 실질적인 빌드
-        BuildPipeline.BuildPlayer(scene, path + "/build.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
+        BuildPipeline.BuildPlayer(scene, path + "build.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
     }
 
 }
