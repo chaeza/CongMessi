@@ -27,6 +27,6 @@ public class BuildSetting : MonoBehaviour
         }
 
         // 실질적인 빌드
-        UnityEditor.BuildPipeline.BuildPlayer(scene, path + "C:/ProgramData/Jenkins.jenkins/workspace/congMessi_Build/Build/build.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
+        UnityEditor.BuildPipeline.BuildPlayer(scene, "C:/ProgramData/Jenkins.jenkins/workspace/congMessi_Build/Build/build.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
     }
 }
