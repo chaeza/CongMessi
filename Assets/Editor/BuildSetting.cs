@@ -25,7 +25,7 @@ public static class BuildSetting
             Directory.CreateDirectory(path);
         }
         // 실질적인 빌드
-        BuildPipeline.BuildPlayer(scene, path + "/build", BuildTarget.StandaloneWindows64, BuildOptions.None);
+        BuildPipeline.BuildPlayer(scene, path + "/build.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
     }
 
 }
