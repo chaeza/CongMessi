@@ -11,7 +11,7 @@ public class BuildSetting : MonoBehaviour
     // Build File Path
     private static readonly string path = cPath + "Build";
 
-    public void MyBuild()
+    public static void MyBuild()
     {
         // 해당 path의 정보
         FileInfo pathInfo = new FileInfo(path);
