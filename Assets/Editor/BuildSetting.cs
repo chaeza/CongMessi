@@ -6,13 +6,14 @@ using UnityEditor;
 
 public class BuildSetting : MonoBehaviour
 {
+    [UnityEditor.MenuItem("MyMenu/MyBuild", false, 1)]
     public static void MyBuild()
     {
         string cPath = System.IO.Directory.GetCurrentDirectory();
         string path = cPath + "/Build/";
 
         // 해당 path의 정보
-        System.IO.FileInfo pathInfo = new System.IO.FileInfo(path);
+        System.IO.FileInfo pathInfo = new System.IO.FileInfo("C:/ProgramData/Jenkins.jenkins/workspace/congMessi_Build/Build");
         // Build 할 씬들
         string[] scene = { "Assets/Scenes/SampleScene.unity" };
         // 그 씬들의 path 정보
@@ -22,20 +23,7 @@ public class BuildSetting : MonoBehaviour
         if(pathInfo.Exists == false)
         {
             // 해당 주소에 새로 폴더 생성
-            System.IO.Directory.CreateDirectory(path);
-        }
-
-        // 씬들 주소 정보 담아서 체크
-        for(int i= 0; i < Scenes.Length; i++)
-        {
-            Scenes[i] = new System.IO.FileInfo(cPath+ "/" + scene[i]);
-
-            // 해당 파일이 없으면 
-            if(Scenes[i].Exists == false)
-            {
-                // 빌드 안함
-                return;
-            }
+            System.IO.Directory.CreateDirectory("C:/ProgramData/Jenkins.jenkins/workspace/congMessi_Build/Build");
         }
 
         // 실질적인 빌드
