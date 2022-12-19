@@ -6,10 +6,10 @@ using UnityEditor;
 
 public class BuildSetting : MonoBehaviour
 {
+    [UnityEditor.MenuItem("MyMenu/MyBuild", false, 1)]
     public static void MyBuild()
     {
         string cPath = Directory.GetCurrentDirectory();
-        Debug.LogError(cPath);
         string path = cPath + "/Build";
 
         // 해당 path의 정보
